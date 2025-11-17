@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Gestor - Pineapple</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .cliente-link {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #6e6e73;
+            text-decoration: none;
+        }
+        .cliente-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">[ Pineapple ]</div>
+            <h3 style="font-weight: 500; color: #333; margin-bottom: 25px;">Acesso do Gestor</h3>
+            
+            <form action="gestor_painel.html" method="get"> <div class="form-group">
+                    <label for="email">E-mail Corporativo</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar no Painel</button>
+            </form>
+
+            <a href="index.html" class="cliente-link">Acesso do Cliente</a>
+
+        </div>
+    </div>
+</body>
+</html>

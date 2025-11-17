@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - TechStore</title>
+    <link rel="stylesheet" href="styleS.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">[ Pineapple ]</div>
+        <ul class="sidebar-nav">
+            <li><a href="gestor_painel.html">🏠 Dashboard</a></li>
+            <li><a href="gestor_produtos.html">📦 Produtos</a></li>
+            <li><a href="gestor_clientes.html" class="active">👤 Clientes</a></li>
+            <li><a href="gestor_relatorios.html">📊 Relatórios</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h1 class="header">Cadastro de Produtos</h1>
+        
+        <div class="card">
+            <form>
+                <div class="form-group">
+                    <label for="prod-nome">Nome do Produto</label>
+                    <input type="text" id="prod-nome" class="form-control" placeholder="Ex: Monitor Gamer 27'">
+                </div>
+                <div class="form-group">
+                    <label for="prod-categoria">Categoria</label>
+                    <input type="text" id="prod-categoria" class="form-control" placeholder="Ex: Monitores">
+                </div>
+                <div class="form-group">
+                    <label for="prod-preco">Preço (R$)</label>
+                    <input type="number" id="prod-preco" class="form-control" placeholder="Ex: 1500.00">
+                </div>
+                <div class="form-group">
+                    <label for="prod-estoque">Estoque</label>
+                    <input type="number" id="prod-estoque" class="form-control" placeholder="Ex: 50">
+                </div>
+                <div class="form-group">
+                    <label for="prod-desc">Descrição</label>
+                    <textarea id="prod-desc" class="form-control" placeholder="Detalhes do produto..."></textarea>
+                </div>
+                
+                <div>
+                    <button type="submit" class="btn btn-primary">Salvar Produto</button>
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

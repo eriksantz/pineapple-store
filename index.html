@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesse sua Conta - Pineapple</title>
+    <link rel="stylesheet" href="styles.css"> <style>
+        .gestor-link {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #6e6e73; 
+            text-decoration: none;
+        }
+        .gestor-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">[ Pineapple ]</div>
+            <form id="login-form" action="cliente_painel.html" method="get"></form>
+            <form action="cliente_painel.html" method="get"> <div class="form-group">
+                
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" class="form-control" placeholder="seu.email@exemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" class="form-control" placeholder="Sua senha">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar</button>
+            </form>
+        
+</form>
+
+            <a href="cadastro.html" class="btn btn-secondary" style="width: 100%; margin-top: 10px;">Criar Conta</a>
+
+            <a href="gestor_login.html" class="gestor-link">Acesso do Gestor</a>
+           
+
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('login-form');
+
+            loginForm.addEventListener('submit', (event) => {
+                event.preventDefault(); 
+
+                const email = document.getElementById('email').value;
+                const senha = document.getElementById('password').value;
+                const userKey = 'pineapple_user_' + email;
+                const userDataString = localStorage.getItem(userKey);
+
+              
+                if (!userDataString) {
+                    alert('Usuário não encontrado. Verifique o e-mail ou cadastre-se.');
+                    return; 
+                }
+                const user = JSON.parse(userDataString);
+
+                if (senha === user.senha) {
+
+                    alert('Login bem-sucedido! Bem-vindo, ' + user.nome);
+                    window.location.href = 'cliente_painel.html'; 
+                } else {
+        
+                    alert('Senha incorreta. Tente novamente.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

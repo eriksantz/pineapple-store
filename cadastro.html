@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua Conta - Pineapple</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Link para voltar ao login */
+        .login-link {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #6e6e73;
+            text-decoration: none;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+</div>
+</div>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const cadastroForm = document.getElementById('cadastro-form');
+        cadastroForm.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+
+            const nome = document.getElementById('nome-cadastro').value;
+            const email = document.getElementById('email-cadastro').value;
+            const senha = document.getElementById('senha-cadastro').value;
+
+            const userKey = 'pineapple_user_' + email;
+            if (localStorage.getItem(userKey)) {
+                alert('Este e-mail já está cadastrado!');
+            } else {
+            
+                const newUser = {
+                    nome: nome,
+                    email: email,
+                    senha: senha 
+                };
+
+    
+                localStorage.setItem(userKey, JSON.stringify(newUser));
+
+                alert('Cadastro realizado com sucesso!');
+                window.location.href = 'index.html'; 
+            }
+        });
+    });
+</script>
+</body>
+</html>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">[ Pineapple ]</div>
+            <h3 style="font-weight: 500; color: #333; margin-bottom: 25px;">Crie sua Conta</h3>
+
+            <form id="cadastro-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome-cadastro" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email-cadastro" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="senha-cadastro" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Criar Conta</button>
+            </form>
+
+            <a href="index.html" class="login-link">Já tem uma conta? Faça login</a>
+        </div>
+    </div>
+</body>
+</html>

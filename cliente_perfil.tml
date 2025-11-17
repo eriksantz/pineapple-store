@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Pineapple</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">[ Pineapple ]</div>
+        <ul class="sidebar-nav">
+            <li><a href="cliente_painel.html">🏠 Meu Painel</a></li>
+            <li><a href="cliente_pedidos.html">🛒 Meus Pedidos</a></li>
+            <li><a href="cliente_perfil.html" class="active">👤 Meu Perfil</a></li>
+            <li><a href="index.html">🚪 Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h1 class="header">Meu Perfil</h1>
+        
+        <div class="card">
+            <h3 style="font-weight: 600; margin-bottom: 25px;">Informações Pessoais</h3>
+            <form>
+                <div class="form-group">
+                    <label for="cli-nome">Nome Completo</label>
+                    <input type="text" id="cli-nome" class="form-control" value="[Nome do Cliente]">
+                </div>
+                <div class="form-group">
+                    <label for="cli-email">E-mail</label>
+                    <input type="email" id="cli-email" class="form-control" value="seu.email@exemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="cli-tel">Telefone</label>
+                    <input type="tel" id="cli-tel" class="form-control" value="(00) 90000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="cli-end">Endereço</label>
+                    <input type="text" id="cli-end" class="form-control" value="Rua das Flores, 123 - São Paulo, SP">
+                </div>
+                
+                <div>
+                    <button type="submit" class="btn btn-primary">Salvar Informações</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3 style="font-weight: 600; margin-bottom: 25px;">Alterar Senha</h3>
+            <form>
+                <div class="form-group">
+                    <label for="pass-atual">Senha Atual</label>
+                    <input type="password" id="pass-atual" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="pass-nova">Nova Senha</label>
+                    <input type="password" id="pass-nova" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="pass-confirma">Confirmar Nova Senha</label>
+                    <input type="password" id="pass-confirma" class="form-control">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-secondary">Alterar Senha</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
